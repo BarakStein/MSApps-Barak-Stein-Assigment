@@ -1,0 +1,25 @@
+create database MyDatabse;
+
+use MyDatabse;
+
+
+drop table Users;
+
+
+create table Users(
+	ID int auto_increment NOT NULL,
+    Name varchar(50) NOT NULL,
+    Email varchar(50) NOT NULL,
+    Password varchar(50) NOT NULL,
+    primary key(ID)
+);
+
+
+ALTER TABLE Users 
+CHANGE  EmailSent EmailSent varchar(10);
+describe Users;
+
+INSERT INTO Users(Name, Email, Password) VALUE ("Barak", "barak@gmail.com", "123456");
+INSERT INTO Users(Name, Email, Password) VALUE ("Refael", "refael@gmail.com", "654321");
+
+Select * from Users order by ID;
